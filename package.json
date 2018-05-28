@@ -1,0 +1,24 @@
+{
+  "name": "huli-metrics",
+  "version": "1.0.1",
+  "description": "this is an inhouse addon for huli developers",
+  "main": "metrics.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/green-fox-academy/huli-metrics-nodejs.git"
+  },
+  "keywords": [
+    "huli",
+    "greenfox",
+    "metrics"
+  ],
+  "author": "fehersanyi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/green-fox-academy/huli-metrics-nodejs/issues"
+  },
+  "homepage": "https://github.com/green-fox-academy/huli-metrics-nodejs#readme"
+}
