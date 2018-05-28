@@ -1,15 +1,19 @@
 'use strict';
 
-function send(applicationName, serviceName) {
+module.exports = {
 
-   const xhr = new XMLHttpRequest();
-   xhr.open('POST', 'internalmetrics.com/event');
-   xhr.setHeader('Content-Type', 'application/json');
-   xhr.send({
-   "time": Date.now(),
-   "level": serviceName,
-   "service_name": applicationName
-   })
+  send(applicationName, serviceName) {
+    return fetch('internalmetrics.com/event', {
+      body: JSON.stringify({
+        time: Date.now(),
+        level: serviceName,
+        service_name: applicationName
+    }),
+      headers: {
+        'content-type': 'application/json'
+      },
+      method: 'POST',
+    })
+    .then(response => response.json());
+  }
 };
-
-export {send}
