@@ -5,7 +5,7 @@ require('isomorphic-fetch');
 
 module.exports = {
   send(applicationName, serviceName) {
-    return fetch('http://localhost:3000', {
+    return fetch('http://52.47.59.43/event', {
       body: JSON.stringify({
         time: Date.now(),
         level: serviceName,
