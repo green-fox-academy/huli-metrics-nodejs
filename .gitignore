@@ -1,4 +1,3 @@
-updatePackage.sh
 .npmignore
 node_modules
 test/

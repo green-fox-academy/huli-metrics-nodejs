@@ -1,5 +1,7 @@
 'use strict';
-const fetch = require('node-fetch');
+
+require('es6-promise').polyfill();
+require('isomorphic-fetch');
 
 module.exports = {
   send(applicationName, serviceName) {
@@ -14,7 +16,13 @@ module.exports = {
       },
       method: 'POST',
     })
-    .then(response => (response.json()))
+    .then((response) => {
+      if(ponse.status != 200) {
+        throw new Error('Bad response :(')
+      } else {
+      (response.json())
+      }
+    })
     .then(data => (data));
   },
 };
