@@ -17,7 +17,7 @@ module.exports = {
       method: 'POST',
     })
     .then((response) => {
-      if(ponse.status != 200) {
+      if(response.status != 200) {
         throw new Error('Bad response :(')
       } else {
       (response.json())
